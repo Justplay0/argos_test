@@ -30,5 +30,8 @@ dist-ssr
 /playwright/.cache/
 /playwright/.auth/
 
+# argos docs
+docs/
+
 # Trae IDE
 .trae/
