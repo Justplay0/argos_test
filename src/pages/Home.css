@@ -1,0 +1,29 @@
+.index-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.index-header {
+  margin-bottom: 32px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 16px;
+}
+
+.index-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1a202c;
+  margin: 0;
+}
+
+.index-subtitle {
+  font-size: 16px;
+  color: #718096;
+  margin-top: 8px;
+}
+
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+}

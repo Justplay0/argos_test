@@ -1,0 +1,23 @@
+.tag-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.tag-badge-default {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.tag-badge-danger {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+.tag-badge-success {
+  background-color: #c6f6d5;
+  color: #2f855a;
+}

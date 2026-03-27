@@ -1,0 +1,28 @@
+.action-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.action-button:not(:disabled) {
+  cursor: pointer;
+}
+
+.action-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.action-button-primary {
+  background-color: #3182ce;
+  color: white;
+}
+
+.action-button-secondary {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
