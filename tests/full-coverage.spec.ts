@@ -7,7 +7,7 @@ test.describe('全量页面视觉回归测试', () => {
     await page.goto('/');
     // 等待所有网络请求完成（如图片加载）
     await page.waitForLoadState('networkidle');
-    await argosScreenshot(page, 'home-page');
+    await argosScreenshot(page, 'homepage');
   });
 
   // 2. 详情页（有库存）
