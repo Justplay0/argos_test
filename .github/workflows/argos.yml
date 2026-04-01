@@ -18,7 +18,9 @@ jobs:
           node-version: '22'
           
       - name: Install dependencies
-        run: npm install --registry=https://registry.npmjs.org/
+        run: |
+          rm -rf package-lock.json node_modules
+          npm install --registry=https://registry.npmjs.org/
         
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
