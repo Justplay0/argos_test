@@ -7,7 +7,7 @@ test.describe('全量页面视觉回归测试', () => {
     await page.goto('/');
     // 等待所有网络请求完成（如图片加载）
     await page.waitForLoadState('networkidle');
-    await argosScreenshot(page, 'homepage');
+    await argosScreenshot(page, 'homepage', { ariaSnapshot: true });
   });
 
   // 2. 详情页（有库存）
@@ -16,7 +16,7 @@ test.describe('全量页面视觉回归测试', () => {
     await page.waitForLoadState('networkidle');
     // 确保页面加载出具体内容
     await expect(page.locator('.detail-title')).toBeVisible();
-    await argosScreenshot(page, 'product-detail-instock');
+    await argosScreenshot(page, 'product-detail-instock', { ariaSnapshot: true });
   });
 
   // 3. 详情页（无库存）
@@ -26,7 +26,7 @@ test.describe('全量页面视觉回归测试', () => {
     await expect(page.locator('.detail-title')).toBeVisible();
     // 确保显示 Out of Stock 按钮
     await expect(page.locator('button', { hasText: 'Out of Stock' })).toBeVisible();
-    await argosScreenshot(page, 'product-detail-outofstock');
+    await argosScreenshot(page, 'product-detail-outofstock', { ariaSnapshot: true });
   });
 
   // 4. 购物车（空）
@@ -41,7 +41,7 @@ test.describe('全量页面视觉回归测试', () => {
     // 确保空状态文案可见
     await expect(page.locator('.cart-empty-message')).toBeVisible();
     
-    await argosScreenshot(page, 'cart-dropdown-empty');
+    await argosScreenshot(page, 'cart-dropdown-empty', { ariaSnapshot: true });
   });
 
   // 5. 购物车（有商品）
@@ -58,7 +58,7 @@ test.describe('全量页面视觉回归测试', () => {
     // 确保购物车内有商品
     await expect(page.locator('.cart-item')).toBeVisible();
     
-    await argosScreenshot(page, 'cart-dropdown-with-items');
+    await argosScreenshot(page, 'cart-dropdown-with-items', { ariaSnapshot: true });
   });
 
   // 6. 404 页面
@@ -68,6 +68,6 @@ test.describe('全量页面视觉回归测试', () => {
     
     // 确保显示未找到的提示
     await expect(page.locator('.not-found-container')).toBeVisible();
-    await argosScreenshot(page, 'product-not-found');
+    await argosScreenshot(page, 'product-not-found', { ariaSnapshot: true });
   });
 });
