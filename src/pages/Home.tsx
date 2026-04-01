@@ -6,7 +6,7 @@ export default function Index() {
   return (
     <div className="index-container">
       <div className="index-header">
-        <h1 className="index-title">Latest Products</h1>
+        <h1 className="index-title">Latest Releases</h1>
         <p className="index-subtitle">
           Discover our new arrivals and best sellers.
         </p>
