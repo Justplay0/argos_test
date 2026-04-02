@@ -33,5 +33,10 @@ dist-ssr
 # argos docs
 docs/
 
+# Environment variables
+.env
+.env.*
+!.env.example
+
 # Trae IDE
 .trae/
